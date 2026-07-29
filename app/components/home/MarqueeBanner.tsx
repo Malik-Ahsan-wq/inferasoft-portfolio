@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 interface MarqueeBannerProps {
   items?: string[]
   speed?: number
+  transparent?: boolean
 }
 
 const defaultItems = [
@@ -20,9 +21,9 @@ const defaultItems = [
   "Interaction Design",
 ]
 
-export default function MarqueeBanner({ items = defaultItems, speed = 20 }: MarqueeBannerProps) {
+export default function MarqueeBanner({ items = defaultItems, speed = 20, transparent }: MarqueeBannerProps) {
   return (
-    <div className="relative overflow-hidden border-y border-white/5 bg-[#0d1f1a]">
+    <div className={`relative overflow-hidden border-y ${transparent ? "border-transparent bg-transparent" : "border-white/5 bg-[#0d1f1a]"}`}>
       <div className="relative py-4 sm:py-5">
         <motion.div
           className="flex gap-8 sm:gap-12 md:gap-16 items-center"

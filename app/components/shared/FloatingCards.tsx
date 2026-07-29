@@ -76,7 +76,7 @@ export default function FloatingCards() {
         </motion.div>
       </motion.div>
 
-
+  
 
       {/* Mobile floating card */}
       <motion.div

@@ -144,8 +144,13 @@ export default function Hero() {
           </div>
         </motion.div>
       </motion.div>
+
+      {/* Full-width marquee at bottom of hero */}
+      <div className="absolute bottom-0 left-0 right-0 z-20">
+        <MarqueeBanner transparent />
+      </div>
     </section>
-        
+ 
         </>
   )
 }
