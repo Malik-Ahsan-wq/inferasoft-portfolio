@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import MarqueeBanner from "@/app/components/home/MarqueeBanner"
 import { Button } from "@/app/components/ui/button"
 import FloatingCards from "@/app/components/shared/FloatingCards"
 
@@ -20,6 +21,7 @@ const itemVariants = {
 
 export default function Hero() {
   return (
+    <>
     <section className="relative min-h-[600px] sm:min-h-[650px] lg:min-h-[620px] xl:min-h-[660px] overflow-hidden flex items-center">
       {/* Background grid lines */}
       <div className="pointer-events-none absolute inset-0 z-0 hidden justify-between px-6 lg:flex lg:px-10">
@@ -123,7 +125,7 @@ export default function Hero() {
                 rotate: [0, 3, 0],
               }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-4 sm:-right-6 top-1/2 z-0 h-[80%] w-[75%] -translate-y-1/2 rounded-full bg-gradient-to-br from-brand-lime/80 to-brand-lime/40 blur-sm"
+              className="absolute -right-4 sm:-right-6 top-1/2 z-0 h-[80%] w-[75%] -translate-y-1/2 rounded-full bg-gradient-to-br from-brand-lime/80 to-brand-lime/40"
             />
 
             {/* Photo */}
@@ -143,5 +145,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
     </section>
+        
+        </>
   )
 }
