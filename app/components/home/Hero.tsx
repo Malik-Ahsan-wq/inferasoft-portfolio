@@ -20,7 +20,7 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen md:h-auto overflow-hidden flex items-center">
+    <section className="relative min-h-[600px] sm:min-h-[650px] lg:min-h-[620px] xl:min-h-[660px] overflow-hidden flex items-center">
       {/* Background grid lines */}
       <div className="pointer-events-none absolute inset-0 z-0 hidden justify-between px-6 lg:flex lg:px-10">
         {[...Array(5)].map((_, i) => (
@@ -36,10 +36,10 @@ export default function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 mx-auto grid w-full max-w-[1264px] grid-cols-1 items-center gap-6 lg:gap-12 px-4 sm:px-6 lg:px-10 pt-24 pb-12 sm:pt-28 lg:pb-16 lg:grid-cols-2"
+        className="relative z-10 mx-auto grid w-full max-w-[1264px] grid-cols-1 items-center gap-6 lg:gap-12 px-4 sm:px-6 lg:px-10 pt-20 sm:pt-24 pb-8 sm:pb-10 lg:pb-12 lg:grid-cols-2"
       >
         {/* Left column */}
-        <div className="relative z-10 py-8 lg:py-16">
+        <div className="relative z-10 py-6 sm:py-8 lg:py-10">
           <motion.div
             variants={itemVariants}
             className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs sm:text-sm font-medium text-white/80 backdrop-blur-sm"
@@ -61,7 +61,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="mt-5 max-w-[520px] text-sm sm:text-[15px] leading-7 text-white/60"
+            className="mt-4 max-w-[520px] text-sm sm:text-[15px] leading-6 sm:leading-7 text-white/60"
           >
             Hi, I&apos;m James, a passionate Product Designer based in the
             USA. I specialize in crafting intuitive, user-centered designs
@@ -70,7 +70,7 @@ export default function Hero() {
 
           <motion.div
             variants={itemVariants}
-            className="mt-8 sm:mt-10 flex flex-wrap items-center gap-4 sm:gap-6"
+            className="mt-6 sm:mt-7 flex flex-wrap items-center gap-4 sm:gap-6"
           >
             <Button variant="gradient" size="lg" className="text-sm sm:text-base">
               Get Started
@@ -95,7 +95,7 @@ export default function Hero() {
           {/* Stats row */}
           <motion.div
             variants={itemVariants}
-            className="mt-10 sm:mt-12 flex items-center gap-6 sm:gap-10"
+            className="mt-6 sm:mt-8 flex items-center gap-6 sm:gap-10"
           >
             {[
               { value: "350+", label: "Projects Done" },
