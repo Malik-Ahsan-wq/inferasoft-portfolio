@@ -25,12 +25,21 @@ export default function AboutSection() {
             <span className="absolute bottom-6 left-16 h-2 w-2 rounded-full bg-white/15" />
             <span className="absolute right-2 top-16 h-1.5 w-1.5 rounded-full bg-white/15" />
 
-            {/* Gradient ring */}
-            <div className="relative flex h-[320px] w-[320px] items-center justify-center rounded-full p-[6px] bg-[conic-gradient(from_180deg,theme(colors.brand)_0%,theme(colors.brand-lime)_55%,transparent_56%,transparent_100%)]">
-              <div className="h-full w-full overflow-hidden rounded-full bg-background p-[6px]">
+            {/* Gradient ring — rotates clockwise continuously */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+              className="relative flex h-[320px] w-[320px] items-center justify-center rounded-full p-[6px] bg-[conic-gradient(from_180deg,theme(colors.brand)_0%,theme(colors.brand-lime)_55%,transparent_56%,transparent_100%)]"
+            >
+              {/* Counter-rotate the photo wrapper so the picture itself stays upright — only the ring appears to spin */}
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                className="h-full w-full overflow-hidden rounded-full bg-background p-[6px]"
+              >
                 <div className="relative h-full w-full overflow-hidden rounded-full">
                   <Image
-                    src="/images/james-scott.jpg"
+                    src="/images/about-us-img.png"
                     alt="James Scott"
                     fill
                     sizes="320px"
@@ -38,8 +47,8 @@ export default function AboutSection() {
                     priority
                   />
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
 
           {/* Right: Content */}
