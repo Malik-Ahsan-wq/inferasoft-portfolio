@@ -1,81 +1,140 @@
 "use client"
 
-import { motion } from "framer-motion"
 import Image from "next/image"
-import { Button } from "@/app/components/ui/button"
-import { Badge } from "@/app/components/ui/badge"
-import { CheckCircle } from "lucide-react"
+import { motion } from "framer-motion"
+import { Mail, Phone, ArrowUpRight } from "lucide-react"
 
-const highlights = [
-  "5+ years of industry experience",
-  "200+ successful projects delivered",
-  "Expert in Figma, Sketch, Adobe Suite",
-  "Award-winning design professional",
-]
-
-export default function About() {
+export default function AboutSection() {
   return (
-    <section id="about" className="relative py-20 sm:py-28 lg:py-32">
+    <section id="about" className="relative py-20 sm:py-28 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-[1264px] px-4 sm:px-6 lg:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image side */}
+        <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+          {/* Left: Circular image with decorative rings */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="relative"
+            className="relative mx-auto flex h-[420px] w-[420px] max-w-full items-center justify-center"
           >
-            <div className="relative mx-auto max-w-[480px] lg:max-w-none">
-              <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border-2 border-brand/20 -z-10" />
-              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-brand/5 to-brand-lime/5">
-                <Image
-                  src="/images/hero-man.png"
-                  alt="About James"
-                  width={560}
-                  height={600}
-                  className="h-auto w-full object-cover"
-                />
+            {/* Outer dashed decorative circle */}
+            <div className="absolute inset-0 rounded-full border border-dashed border-white/15" />
+
+            {/* Decorative dots */}
+            <span className="absolute bottom-10 left-4 h-2.5 w-2.5 rounded-full bg-white/20" />
+            <span className="absolute bottom-6 left-16 h-2 w-2 rounded-full bg-white/15" />
+            <span className="absolute right-2 top-16 h-1.5 w-1.5 rounded-full bg-white/15" />
+
+            {/* Gradient ring */}
+            <div className="relative flex h-[320px] w-[320px] items-center justify-center rounded-full p-[6px] bg-[conic-gradient(from_180deg,theme(colors.brand)_0%,theme(colors.brand-lime)_55%,transparent_56%,transparent_100%)]">
+              <div className="h-full w-full overflow-hidden rounded-full bg-background p-[6px]">
+                <div className="relative h-full w-full overflow-hidden rounded-full">
+                  <Image
+                    src="/images/james-scott.jpg"
+                    alt="James Scott"
+                    fill
+                    sizes="320px"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
-              {/* Floating experience badge */}
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -bottom-4 -left-4 rounded-xl bg-background border shadow-lg px-4 py-3"
-              >
-                <p className="text-2xl font-bold text-brand">8+</p>
-                <p className="text-xs text-muted-foreground">Years Experience</p>
-              </motion.div>
             </div>
           </motion.div>
 
-          {/* Content side */}
+          {/* Right: Content */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <Badge variant="brand" className="mb-4">About Me</Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6">
-              Transforming Ideas Into <span className="text-brand">Exceptional</span> Designs
+            <div className="mb-4 flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-gradient-to-r from-brand to-brand-lime" />
+              <span className="text-sm font-semibold text-muted-foreground">
+                About Us
+              </span>
+            </div>
+
+            <h2 className="mb-5 text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
+              Who is{" "}
+              <span className="bg-gradient-to-r from-brand to-brand-lime bg-clip-text text-transparent">
+                james scott?
+              </span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              I&apos;m a product designer with a passion for creating meaningful digital experiences. 
-              My approach combines user research, creative thinking, and technical precision to 
-              deliver designs that not only look great but drive real business results.
+
+            <p className="mb-4 text-base font-bold leading-relaxed text-foreground">
+              &ldquo;Helping businesses grow with creative web design and
+              development solutions.&rdquo;
             </p>
-            <ul className="space-y-3 mb-8">
-              {highlights.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-sm text-foreground/80">
-                  <CheckCircle className="h-5 w-5 text-brand shrink-0 mt-0.5" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Button variant="gradient" size="lg">
-              Learn More About Me
-            </Button>
+
+            <p className="mb-8 text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Hi, I&apos;m James, a passionate{" "}
+              <a
+                href="#services"
+                className="text-brand-lime underline underline-offset-2 hover:opacity-80"
+              >
+                UI/UX designer
+              </a>{" "}
+              who thrives on turning ideas into visually stunning realities.
+              With a love for creativity and a meticulous eye for detail.
+            </p>
+
+            <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+              {/* Contact info */}
+              <div className="flex flex-col gap-5">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15">
+                    <Mail className="h-4 w-4 text-brand-lime" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">
+                      Email Us At
+                    </p>
+                    <p className="text-sm font-bold text-foreground">
+                      Info@domain.com
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15">
+                    <Phone className="h-4 w-4 text-brand-lime" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">
+                      Phone Number
+                    </p>
+                    <p className="text-sm font-bold text-foreground">
+                      +0 123 456 789
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Divider */}
+              <div className="hidden h-24 w-px bg-white/10 sm:block" />
+
+              {/* Stat card */}
+              <div className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-6 text-center">
+                <span className="text-4xl font-bold bg-gradient-to-r from-brand to-brand-lime bg-clip-text text-transparent">
+                  12+
+                </span>
+                <span className="text-xs font-medium text-muted-foreground whitespace-nowrap">
+                  Years Experience
+                </span>
+
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-foreground hover:text-brand-lime"
+                >
+                  My Resume
+                  <ArrowUpRight className="h-3.5 w-3.5 text-brand-lime" />
+                </a>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
