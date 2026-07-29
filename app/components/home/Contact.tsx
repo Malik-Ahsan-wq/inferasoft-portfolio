@@ -17,7 +17,7 @@ const contactInfo = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative py-20 sm:py-28 lg:py-32 bg-muted/30">
+    <section id="contact" className="relative py-20 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-[1264px] px-4 sm:px-6 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

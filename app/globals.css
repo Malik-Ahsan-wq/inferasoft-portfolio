@@ -3,42 +3,42 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: hsl(160 20% 99%);
-  --color-foreground: hsl(160 10% 10%);
+  --color-background: #0F1A1B;
+  --color-foreground: hsl(160 10% 95%);
 
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(160 10% 10%);
+  --color-card: hsl(160 15% 10%);
+  --color-card-foreground: hsl(160 10% 95%);
 
-  --color-popover: hsl(0 0% 100%);
-  --color-popover-foreground: hsl(160 10% 10%);
+  --color-popover: hsl(160 15% 10%);
+  --color-popover-foreground: hsl(160 10% 95%);
 
-  --color-primary: hsl(167 80% 38%);
-  --color-primary-foreground: hsl(0 0% 100%);
+  --color-primary: hsl(167 80% 50%);
+  --color-primary-foreground: hsl(0 0% 5%);
 
-  --color-secondary: hsl(160 20% 92%);
-  --color-secondary-foreground: hsl(160 50% 20%);
+  --color-secondary: hsl(160 15% 15%);
+  --color-secondary-foreground: hsl(160 10% 90%);
 
-  --color-muted: hsl(160 15% 94%);
-  --color-muted-foreground: hsl(160 10% 45%);
+  --color-muted: hsl(160 15% 12%);
+  --color-muted-foreground: hsl(160 10% 60%);
 
-  --color-accent: hsl(160 30% 88%);
-  --color-accent-foreground: hsl(160 50% 20%);
+  --color-accent: hsl(160 15% 18%);
+  --color-accent-foreground: hsl(160 10% 90%);
 
   --color-destructive: hsl(0 84% 60%);
   --color-destructive-foreground: hsl(0 0% 100%);
 
-  --color-border: hsl(160 15% 88%);
-  --color-input: hsl(160 15% 88%);
-  --color-ring: hsl(167 80% 38%);
+  --color-border: hsl(160 15% 18%);
+  --color-input: hsl(160 15% 18%);
+  --color-ring: hsl(167 80% 50%);
 
-  --color-sidebar: hsl(160 20% 98%);
-  --color-sidebar-foreground: hsl(160 10% 10%);
-  --color-sidebar-primary: hsl(167 80% 38%);
-  --color-sidebar-primary-foreground: hsl(0 0% 100%);
-  --color-sidebar-accent: hsl(160 20% 92%);
-  --color-sidebar-accent-foreground: hsl(160 50% 20%);
-  --color-sidebar-border: hsl(160 15% 88%);
-  --color-sidebar-ring: hsl(167 80% 38%);
+  --color-sidebar: hsl(160 15% 10%);
+  --color-sidebar-foreground: hsl(160 10% 95%);
+  --color-sidebar-primary: hsl(167 80% 50%);
+  --color-sidebar-primary-foreground: hsl(0 0% 5%);
+  --color-sidebar-accent: hsl(160 15% 18%);
+  --color-sidebar-accent-foreground: hsl(160 10% 90%);
+  --color-sidebar-border: hsl(160 15% 18%);
+  --color-sidebar-ring: hsl(167 80% 50%);
 
   --color-brand: hsl(167 80% 38%);
   --color-brand-light: hsl(157 100% 73%);
@@ -103,27 +103,6 @@
   }
 }
 
-.dark {
-  --color-background: hsl(160 20% 5%);
-  --color-foreground: hsl(160 10% 95%);
-  --color-card: hsl(160 15% 10%);
-  --color-card-foreground: hsl(160 10% 95%);
-  --color-popover: hsl(160 15% 10%);
-  --color-popover-foreground: hsl(160 10% 95%);
-  --color-primary: hsl(167 80% 50%);
-  --color-primary-foreground: hsl(0 0% 5%);
-  --color-secondary: hsl(160 15% 15%);
-  --color-secondary-foreground: hsl(160 10% 90%);
-  --color-muted: hsl(160 15% 12%);
-  --color-muted-foreground: hsl(160 10% 60%);
-  --color-accent: hsl(160 15% 18%);
-  --color-accent-foreground: hsl(160 10% 90%);
-  --color-destructive: hsl(0 70% 50%);
-  --color-destructive-foreground: hsl(0 0% 95%);
-  --color-border: hsl(160 15% 18%);
-  --color-input: hsl(160 15% 18%);
-  --color-ring: hsl(167 80% 50%);
-}
 
 /* Animation utilities for shadcn/ui */
 @utility animate-in {

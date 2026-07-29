@@ -15,7 +15,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-20 sm:py-28 lg:py-32 bg-muted/30">
+    <section id="about" className="relative py-20 sm:py-28 lg:py-32">
       <div className="mx-auto max-w-[1264px] px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image side */}

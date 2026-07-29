@@ -20,7 +20,7 @@ const itemVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#0F1A1B] flex items-center">
+    <section className="relative min-h-screen md:h-auto overflow-hidden flex items-center">
       {/* Background grid lines */}
       <div className="pointer-events-none absolute inset-0 z-0 hidden justify-between px-6 lg:flex lg:px-10">
         {[...Array(5)].map((_, i) => (
@@ -129,7 +129,7 @@ export default function Hero() {
             {/* Photo */}
             <div className="relative z-10">
               <Image
-                src="/images/hero-man.png"
+                src="/images/hero-img.png"
                 alt="James, product designer"
                 width={629}
                 height={669}

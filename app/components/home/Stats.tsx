@@ -11,7 +11,7 @@ const stats = [
 
 export default function Stats() {
   return (
-    <section className="relative py-16 sm:py-20 bg-[#0F1A1B] overflow-hidden">
+    <section className="relative py-16 sm:py-20 overflow-hidden">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-brand/5 via-transparent to-brand-lime/5" />
       <div className="relative mx-auto max-w-[1264px] px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
