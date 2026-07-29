@@ -22,7 +22,7 @@ const defaultItems = [
   "INTERACTION DESIGN",
 ];
 
-export default function MarqueeBanner({ items = defaultItems, speed = 20, transparent }: MarqueeBannerProps) {
+export default function MarqueeBanner({ items = defaultItems, speed = 4, transparent }: MarqueeBannerProps) {
   return (
     <div className={`relative overflow-hidden border-y ${transparent ? "border-white/10 bg-gradient-to-r from-brand to-brand-lime" : "border-white/5 bg-[#0d1f1a]"}`}>
       <div className="relative py-4 sm:py-5">

@@ -1,19 +1,21 @@
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Montserrat, Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/app/components/layout/Navbar"
 import Footer from "@/app/components/layout/Footer"
 import { Toaster } from "@/app/components/ui/toaster"
 import { StarsBackgroundDemo } from "@/app/components/home/StarsBackgroundDemo"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 })
 
 export const metadata: Metadata = {
@@ -30,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}
+      className={`${montserrat.variable} ${plusJakartaSans.variable} scroll-smooth dark`}
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col text-foreground antialiased">

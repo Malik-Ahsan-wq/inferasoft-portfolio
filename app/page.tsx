@@ -1,6 +1,5 @@
 import Hero from "@/app/components/home/Hero"
-
-import Services from "@/app/components/home/Services"
+import ServicesSection from "@/app/components/home/ServicesSection"
 import About from "@/app/components/home/About"
 import Stats from "@/app/components/home/Stats"
 import Testimonials from "@/app/components/home/Testimonials"
@@ -10,8 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-  
-      <Services />
+      <ServicesSection />
       <Stats />
       <About />
       <Testimonials />
